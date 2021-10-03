@@ -16,7 +16,7 @@ exports.searchUsers = asyncHandler(async (req, res, next) => {
 
   if (!users) {
     res.status(404);
-    throw new Error("No users found in search");
+
   }
 
   res.status(200).json({ users: users });
