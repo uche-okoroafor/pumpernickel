@@ -7,6 +7,8 @@ const asyncHandler = require("express-async-handler");
 exports.searchUsers = asyncHandler(async (req, res, next) => {
   const searchString = req.query.search;
 
+
+// logged
   let users;
   if (searchString) {
     users = await User.find({
